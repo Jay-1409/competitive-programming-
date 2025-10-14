@@ -92,3 +92,15 @@ public:
         return cnt;
     }
 };
+/*
+a*b = c
+
+let c = 25
+then root(a*b) = 5
+meaning that a = x*x and b = y*y (probably x = y)
+that means that anything inside the root has to be a perfect square too
+
+hence if root(asq * bsq * c * d) where c/d are the values in the prime factor which are not squared, = a*broot(c*d)
+now if c == d 
+                = a*b*c which would be a perfect square 
+*/
