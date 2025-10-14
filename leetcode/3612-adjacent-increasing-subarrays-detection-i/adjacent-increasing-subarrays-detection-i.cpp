@@ -1,23 +1,24 @@
 class Solution {
 public:
     bool hasIncreasingSubarrays(vector<int>& nums, int k) {
-        if (k == 1) return true; 
-        int n = nums.size();
-        auto inc = [&](int start) {
-            for (int i = start; i < start + k - 1; ++i) {
-                if (nums[i] >= nums[i + 1]) {
-                    return false;
+        stack<int> stk; int prev = 0;
+        for(auto &i : nums) {
+            if(stk.empty()) {
+                stk.push(i);
+            } else {
+                if(i > stk.top()) 
+                    stk.push(i);
+                else {
+                    prev = stk.size();
+                    stk = {};
+                    stk.push(i);
                 }
-            }
-            return true;
-        };
-        
-        for (int i = 0; i <= n - 2 * k; ++i) {
-            if (inc(i) && inc(i + k)) {
-                return true;
+                if(stk.size() >= k && prev >= k)
+                    return true;
+                else if(stk.size() >= 2 * k || prev >= 2 * k)
+                    return true;
             }
         }
-        
-        return false;
+        return false;    
     }
 };
