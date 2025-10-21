@@ -37,7 +37,6 @@ public:
                 right_removable_sum = min((negative + positive), right_removable_sum);
             }
         }
-        cout << (right_removable_sum + left_removable_sum) << endl;
         long long half_sum = 2 * normal_sum - (right_removable_sum + left_removable_sum);
         long long ans = max({kadanes_sum, partial_sum - (right_removable_sum + left_removable_sum), half_sum});
         return max(0LL, ans % MOD);
