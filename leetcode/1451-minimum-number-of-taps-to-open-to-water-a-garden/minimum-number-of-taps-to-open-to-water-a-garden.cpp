@@ -15,7 +15,8 @@ public:
             if (i > farthest) 
                 return -1;  
             farthest = max(farthest, maxReach[i]);
-            if (i == currEnd && i != n) {          
+            if (i == currEnd && i != n) {       
+                // already covered that point n in current_END so since there is no new segment after this pooint we dont need to open any other new tap   
                 tapsUsed++;
                 currEnd = farthest;
             }
