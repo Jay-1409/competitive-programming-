@@ -6,6 +6,7 @@ rejected from
   - linkedin (1 time)
   - chess.com (1 time)
   - makes me cry trying to remember more
+    
 Ghosted by 
   - google (1 time)
   - amazon (1 time)
