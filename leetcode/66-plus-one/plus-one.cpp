@@ -8,7 +8,6 @@ public:
             if(digits[i] >= 10 && i > 0){
                 digits[i] -= 10;
             }
-            cout << digits[i] << endl;
         }           
         reverse(digits.begin(),digits.end());
         if(digits.back() >= 10){
