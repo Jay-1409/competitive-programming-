@@ -5,17 +5,15 @@ public:
         int cnt = 0;
         for(int i = 0; i < n - 1; ++i) {
             int j = i + 1;
-            priority_queue<int, vector<int>, greater<int>> pq;
-            pq.push(neededTime[i]);
+            int sum = neededTime[i];
+            int maxe = neededTime[i];
             int len = 0;
             while(colors[i] == colors[j]) {
-                pq.push(neededTime[j++]);
+                sum += neededTime[j];
+                maxe = max(maxe, neededTime[j++]);
                 len++;
             }
-            while(len--) {
-                cnt += pq.top();
-                pq.pop();
-            }
+            cnt += (sum - maxe);
             if(j > i + 1) {
                 i = j - 1;
             }
