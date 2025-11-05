@@ -3,6 +3,7 @@ My greatest fails
 Literally thrown out 
   - Trilogy (1 time)
   - shell (1 time)
+  - lam labs
     
 rejected from 
   - microsoft (3 times)
