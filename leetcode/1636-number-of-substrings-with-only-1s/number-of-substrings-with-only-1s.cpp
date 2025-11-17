@@ -14,7 +14,6 @@ public:
             if(ok) {
                 //sz >= 2
                 long long diff = r - l;
-                cout << diff << endl;
                 long long adds = diff * (diff + 1) / 2;
                 ans = (ans + adds) % MOD;
             }
