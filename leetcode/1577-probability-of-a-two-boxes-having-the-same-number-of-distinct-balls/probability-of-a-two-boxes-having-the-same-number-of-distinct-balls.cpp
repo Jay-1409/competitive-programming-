@@ -4,10 +4,9 @@ public:
         int k = balls.size();
         int totalBalls = 0;
         for (int b : balls) totalBalls += b;
-        
+
         int half = totalBalls / 2;
 
-        // Precompute combinations
         vector<vector<double>> C(51, vector<double>(51, 0));
         for (int i = 0; i <= 50; i++) {
             C[i][0] = C[i][i] = 1;
@@ -15,9 +14,9 @@ public:
                 C[i][j] = C[i-1][j-1] + C[i-1][j];
         }
 
-        double totalWays = 0;
-        double goodWays = 0;
+        double totalWays = C[totalBalls][half];
 
+        double ans = 0;
         vector<int> pick(k, 0);
 
         function<void(int,int)> dfs = [&](int idx, int used) {
@@ -28,23 +27,22 @@ public:
                 double ways = 1;
 
                 for (int i = 0; i < k; i++) {
-                    int x = pick[i];
-                    int rest = balls[i] - x;
+                    int a = pick[i];
+                    int b = balls[i] - a;
 
-                    if (x > 0) distinctA++;
-                    if (rest > 0) distinctB++;
+                    if (a > 0) distinctA++;
+                    if (b > 0) distinctB++;
 
-                    ways *= C[balls[i]][x];
+                    ways *= C[balls[i]][a];
                 }
 
-                totalWays += ways;
-                if (distinctA == distinctB)
-                    goodWays += ways;
+                if (distinctA == distinctB) {
+                    ans += ways / totalWays;  
+                }
 
                 return;
             }
 
-            // Try all possible picks for this color
             for (int take = 0; take <= balls[idx]; take++) {
                 if (used + take > half) break;
                 pick[idx] = take;
@@ -54,9 +52,10 @@ public:
 
         dfs(0, 0);
 
-        return goodWays / totalWays;
+        return ans;
     }
 };
+
 
 /**
 PROMPT GIVEN 
