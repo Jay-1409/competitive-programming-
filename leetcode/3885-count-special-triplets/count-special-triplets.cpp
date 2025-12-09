@@ -8,7 +8,6 @@ public:
         for(int i = 0; i < n; i++) {
             int target = nums[i] * 2;
             if(mpl.find(target) != mpl.end()) {
-                // the target has appeared before, so we have atleast one valid i, for the current j
                 a[i] = mpl[target];
             }
             mpl[nums[i]]++;
@@ -16,7 +15,6 @@ public:
         for(int i = n - 1; i >= 0; --i) {
             int target = nums[i] * 2;
             if(mpr.find(target) != mpr.end()) {
-                // the target has appeared before, so we have atleast one valid i, for the current j
                 b[i] = mpr[target];
             }
             mpr[nums[i]]++;
