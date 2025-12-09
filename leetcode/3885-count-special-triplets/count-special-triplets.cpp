@@ -2,19 +2,19 @@ class Solution {
 public:
   int specialTriplets(vector<int>& nums) {
         const long long MOD = 1e9 + 7;
-        map<int, int> mpl, mpr;
+        unordered_map<int, int> mpl, mpr;
         int n = nums.size();
         vector<long long> a(n, 0), b(n, 0);
         for(int i = 0; i < n; i++) {
             int target = nums[i] * 2;
-            if(mpl.find(target) != mpl.end()) {
+            if(mpl.count(target)) {
                 a[i] = mpl[target];
             }
             mpl[nums[i]]++;
         }
         for(int i = n - 1; i >= 0; --i) {
             int target = nums[i] * 2;
-            if(mpr.find(target) != mpr.end()) {
+            if(mpr.count(target)) {
                 b[i] = mpr[target];
             }
             mpr[nums[i]]++;
