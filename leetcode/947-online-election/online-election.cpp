@@ -2,7 +2,7 @@ class TopVotedCandidate {
 public:
     static constexpr int M = 5000;
     vector<vector<int>> candidates{M};
-    map<int,int> mp;
+    vector<int> mp = vector<int>(M, 0);
     vector<int> time;
     vector<int> candidate;
     TopVotedCandidate(vector<int>& persons, vector<int>& times) {
@@ -10,9 +10,6 @@ public:
         int overallHighestVotedCandidate = -1;
         int overallMaxe = INT_MIN;
         for(int i = 0; i < n; ++i) {
-            if(mp.find(persons[i]) == mp.end()){
-                mp[persons[i]] = 0;
-            }
             mp[persons[i]]++;
             if(mp[persons[i]] >= overallMaxe) {
                 overallHighestVotedCandidate = persons[i];
