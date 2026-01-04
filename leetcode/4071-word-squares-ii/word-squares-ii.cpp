@@ -1,11 +1,8 @@
 class Solution {
 public:
     vector<vector<string>> wordSquares(vector<string>& words) {
-        vector<string> sorivandek = words; 
-
         set<vector<string>> st;
         int n = words.size();
-
         for (int i = 0; i < n; ++i) {
             for (int j = 0; j < n; ++j) 
                 if (j != i) {
