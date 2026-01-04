@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<vector<string>> wordSquares(vector<string>& words) {
-        vector<string> sorivandek = words; // required
+        vector<string> sorivandek = words; 
 
         set<vector<string>> st;
         int n = words.size();
