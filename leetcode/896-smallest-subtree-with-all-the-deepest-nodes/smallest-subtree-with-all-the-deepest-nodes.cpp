@@ -37,10 +37,21 @@ public:
         int max_fav_root_depth = 0;
         TreeNode* lca = root;
         auto dfs = [&](TreeNode* cur, int depth, auto && self) -> set<int> {
+            auto insert_minor_set_into_major_set = [&](set<int> &minor, set<int> &major) -> void {
+                for(auto &I : minor) {
+                    major.insert(I);
+                }
+            };  
+            auto is_current_node_one_of_deapest = [&](TreeNode* _cur) -> bool {
+                if(deapest_root.find(cur->val) != deapest_root.end()) {
+                    return true;
+                }
+                return false;
+            };
             if(!cur) 
                 return {};
             set<int> cur_good_ele;
-            if(deapest_root.find(cur->val) != deapest_root.end()) {
+            if(is_current_node_one_of_deapest(cur)) {
                 cur_good_ele.insert(cur->val);
             }
             set<int> l,r;
@@ -50,12 +61,8 @@ public:
             if(cur->right) {
                 r = self(cur->right, depth + 1, self);
             }
-            for(auto &I : l) {
-                cur_good_ele.insert(I);
-            }
-            for(auto &I : r) {
-                cur_good_ele.insert(I);
-            }
+            insert_minor_set_into_major_set(l, cur_good_ele);
+            insert_minor_set_into_major_set(r, cur_good_ele);
             if(cur_good_ele == deapest_root && depth > max_fav_root_depth) {
                 max_fav_root_depth = depth;
                 lca = cur;
