@@ -1,1 +1,1 @@
-<h2>minimum-deletions-to-make-string-balanced Notes</h2><hr>[ Time taken: 4 hrs 37 m 58 s ]
+<h2>minimum-deletions-to-make-string-balanced Notes</h2><hr>[ Time taken: 17 m 38 s ]
