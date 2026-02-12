@@ -12,17 +12,16 @@ public:
             }
         }
         int best_ans = 1;
+        int prev;
         for(int i = 0; i < n; ++i) {
             for(int j = i + 1; j < n; ++j) {
-                int prev = -1;
-                bool possible = true;
+                prev = -1;
                 for(int k = 0; k < 26; ++k) {
                     int curr_occ = pfx[j + 1][k] - pfx[i][k];
                     if(curr_occ > 0) {
                         if(prev == -1) {
                             prev = curr_occ;
                         } else if(prev != curr_occ) {
-                            possible = false;
                             goto next;
                         }
                     }
