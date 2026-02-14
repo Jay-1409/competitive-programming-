@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 /**
  * Fenwick Tree (Binary Indexed Tree) for Range XOR Updates and Point Queries.
  * This implementation follows the standard BIT logic but uses XOR instead of addition.
