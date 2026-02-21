@@ -4,21 +4,21 @@ Literally thrown out
   - Trilogy (1 time)
   - shell (1 time)
   - lam labs
+  - google (1 time)
     
 rejected from 
   - microsoft (3 times)
   - salesforce (2 times)
   - linkedin (1 time)
   - chess.com (1 time)
-  - makes me cry trying to remember more
     
 Ghosted by 
   - google (1 time)
   - amazon (1 time)
   - paypal (1 time)
   - baker huges (1 time)
-  - goldman sacs (1 time)
-  - why
+  - goldman sacs (2 time)
+  - atlan
     
 Offers form 
  - Zidio (1 time)
