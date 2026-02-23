@@ -2,18 +2,19 @@ class Solution {
 public:
     bool hasAllCodes(string s, int k) {
         string x;
-        unordered_map<string, bool> st;
+        unordered_map<int, bool> st;
         int n = s.size();
+        int val = 0;
         for(int i = 0; i < n; ++i) {
             if(i >= k) {
-                st[x] = true;
-                reverse(x.begin(), x.end());
-                x.pop_back();
-                reverse(x.begin(), x.end());
+                st[val] = true;
+                val &= (INT_MAX >> (32 - k));
             }
-            x.push_back(s[i]);
+            val <<= 1;
+            if(s[i] == '1')
+                val |= 1;
         }
-        st[x] = true;
+        st[val] = true;
         long long tot = (1 << (k));
         return tot == st.size();
     }
