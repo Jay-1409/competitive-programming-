@@ -17,19 +17,17 @@ public:
                 }
             }
         }
-        int sz = 0;
         char x = 'a';
+        int sz = 0;
         for(auto &I : stk) {
-            sz+=  (int)I.size();
-        }
-        string r(sz, 'a');
-        for(auto &I : stk) {
+            sz += (int)I.size();
             while(!I.empty()) {
-                r[I.top()] = x;
+                s[I.top()] = x;
                 I.pop();
             }
             x++;
         }
-        return r;
+        s.resize(sz);
+        return s;
     }
 };
