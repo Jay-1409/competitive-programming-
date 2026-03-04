@@ -1,0 +1,1 @@
+{"name":"Local: insomiacure","url":"e:\\Coding\\Code foreces\\cpp\\insomiacure.cpp","tests":[{"id":1711099691098,"input":"1\n2\n3\n4\n12\n","output":"12\n"},{"id":1711099764256,"input":"2\n3\n4\n5\n24","output":"17"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Coding\\Code foreces\\cpp\\insomiacure.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+        fgets(s,n,stdin);

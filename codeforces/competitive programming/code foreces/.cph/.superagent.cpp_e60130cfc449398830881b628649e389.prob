@@ -1,0 +1,1 @@
+{"name":"Local: superagent","url":"e:\\Coding\\Code foreces\\code foreces\\superagent.cpp","tests":[{"id":1712764224083,"input":"XX.\n...\n.XX\n","output":"YES\n"},{"id":1712764314338,"input":"X.X\nX..\n...","output":"NO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Coding\\Code foreces\\code foreces\\superagent.cpp","group":"local","local":true}

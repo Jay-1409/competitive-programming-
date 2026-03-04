@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp-Like Website</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- Home Page -->
+        <div id="homePage">
+            <h1>Welcome to WhatsApp-Like Website</h1>
+            <button onclick="openChat('John')">Start Chat with John</button>
+            <button onclick="openChat('Jane')">Start Chat with Jane</button>
+        </div>
+
+        <!-- Chat Page -->
+        <div id="chatPage" style="display: none;">
+            <h2>Chat with <span id="chatUserName"></span></h2>
+            <div id="messages"></div>
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+            <button onclick="goToHomePage()">Back to Home</button>
+        </div>
+    </div>
+
+    <script>
+        // Add your JavaScript code here
+        function openChat(userName) {
+            document.getElementById('homePage').style.display = 'none';
+            document.getElementById('chatPage').style.display = 'block';
+            document.getElementById('chatUserName').innerText = userName;
+            // Load chat history or connect to a real-time messaging service
+        }
+
+        function sendMessage() {
+            const messageInput = document.getElementById('messageInput');
+            const messagesContainer = document.getElementById('messages');
+            const message = messageInput.value;
+
+            // Add the sent message to the chat
+            messagesContainer.innerHTML += `<div><strong>You:</strong> ${message}</div>`;
+
+            // Implement the logic to send the message to the server or update the chat history
+            // This is a simplified example, a real application would use a server-side API
+            // to handle message sending and receiving.
+            
+            // Clear the input field
+            messageInput.value = '';
+        }
+
+        function goToHomePage() {
+            document.getElementById('homePage').style.display = 'block';
+            document.getElementById('chatPage').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

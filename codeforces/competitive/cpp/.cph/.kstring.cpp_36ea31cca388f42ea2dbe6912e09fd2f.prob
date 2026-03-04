@@ -1,0 +1,1 @@
+{"name":"Local: kstring","url":"e:\\Coding\\Code foreces\\cpp\\kstring.cpp","tests":[{"id":1711026280231,"input":"2\naazz\n","output":"azaz\n"},{"id":1711026614757,"input":"3\nabcabcabz","output":"-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Coding\\Code foreces\\cpp\\kstring.cpp","group":"local","local":true}

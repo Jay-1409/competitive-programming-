@@ -1,0 +1,1 @@
+{"name":"Local: productofbinarydecimal","url":"e:\\Coding\\Code foreces\\cpp\\productofbinarydecimal.cpp","tests":[{"id":1711642428779,"input":"1\n112\n","output":""},{"id":1711643472624,"input":"1\n14641","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Coding\\Code foreces\\cpp\\productofbinarydecimal.cpp","group":"local","local":true}

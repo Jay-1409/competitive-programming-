@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style_feedback.css">
+</head>
+<body>
+    <div><style color:blue;></style>
+        <h1 id="title   "><u>Feedback Form</u></h1>
+        <form action="/action.php">
+            <input type="text" placeholder="Enter your name:" class="info">
+            <br>
+            <input type="text" placeholder="Enter your age: " class="info">
+            <br>
+            <br>
+            <p><b>Q. Was the website functioning properly?</b></p>
+            <label for="101">
+            <input type="radio" value="Yes" name="class" id="101">Yes
+            </label>
+            <label for="102">
+            <input type="radio" value="No" name="class" id="102">No
+            </label>
+            <br>
+            <br>
+            <p><b>Mark if it applies True for you</b></p>
+            <label for="covid">
+                <input type="checkbox" value="Covid Vaccinated" name="healthQ" id="covid">Covid Vaccinated
+            </label>
+            <label for="bp">
+                <input type="checkbox" value="Blood presure" name="healthQ" id="bp">Blood pressure
+            </label>
+            <label for="Diabetes">
+                <input type="checkbox" value="Diabetes" name="healthQ"id="Diabetes">Diabetes
+            </label>
+            <br>
+            <br>
+            <p><b>Select the current month</b></p>
+            <select name="Month" id="months">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="may">May</option>
+                <option value="jun">Jun</option>
+                <option value="jul">Jul</option>
+                <option value="aug">Aug</option>
+                <option value="sep">Sep</option>
+                <option value="oct">Oct</option>
+                <option value="nov">Nov</option>
+                <option value="dec">Dec</option>
+            </select>
+            <br>
+            <br>
+            <div>
+                <textarea name="feedback" id="101" placeholder="Please give any suggestions..." rows="5" cols="40"></textarea>
+            </div>
+        </form>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/C5fLxtJH2Qs?si=WEraAd-1EFb9aX_r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</body>
+</html>

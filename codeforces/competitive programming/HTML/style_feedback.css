@@ -1,0 +1,16 @@
+body{
+    background-color: chocolate;
+}
+#title{
+    color:crimson;
+}
+#months{
+    color:brown;
+    background-color: burlywood;
+}
+.info{
+    background-color: cadetblue;
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}

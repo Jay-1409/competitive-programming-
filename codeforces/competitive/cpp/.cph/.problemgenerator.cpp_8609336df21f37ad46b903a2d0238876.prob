@@ -1,0 +1,1 @@
+{"name":"Local: problemgenerator","url":"d:\\Desktop\\Coding\\Code foreces\\cpp\\problemgenerator.cpp","tests":[{"id":1717425790889,"input":"3\n10 1\nBGECDCBDED\n10 2\nBGECDCBDED\n9 1\nBBCDEFFGG","output":"2\n5\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Desktop\\Coding\\Code foreces\\cpp\\problemgenerator.cpp","group":"local","local":true}

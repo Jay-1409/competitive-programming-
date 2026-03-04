@@ -1,0 +1,1 @@
+{"name":"Local: twobrackets","url":"d:\\Desktop\\Coding\\Code foreces\\code foreces\\twobrackets.cpp","tests":[{"id":1713805359282,"input":"5\n()\n[]()\n([)]\n)]([\n)[(]","output":"1\n2\n2\n0\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Desktop\\Coding\\Code foreces\\code foreces\\twobrackets.cpp","group":"local","local":true}

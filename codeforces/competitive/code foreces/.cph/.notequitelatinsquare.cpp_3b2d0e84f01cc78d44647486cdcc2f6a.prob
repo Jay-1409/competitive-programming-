@@ -1,0 +1,1 @@
+{"name":"Local: notequitelatinsquare","url":"e:\\Coding\\Code foreces\\code foreces\\notequitelatinsquare.cpp","tests":[{"id":1711881489195,"input":"3\nABC\nC?B\nBCA\nBCA\nCA?\nABC\n?AB\nBCA\nABC","output":"A\nB\nC"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Coding\\Code foreces\\code foreces\\notequitelatinsquare.cpp","group":"local","local":true}

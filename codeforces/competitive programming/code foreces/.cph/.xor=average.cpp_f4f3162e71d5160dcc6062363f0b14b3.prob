@@ -1,0 +1,1 @@
+{"name":"Local: xor=average","url":"d:\\Desktop\\Coding\\Code foreces\\code foreces\\xor=average.cpp","tests":[{"id":1715495923408,"input":"3\n1\n4\n3","output":"69\n13 2 8 1\n7 7 7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Desktop\\Coding\\Code foreces\\code foreces\\xor=average.cpp","group":"local","local":true}

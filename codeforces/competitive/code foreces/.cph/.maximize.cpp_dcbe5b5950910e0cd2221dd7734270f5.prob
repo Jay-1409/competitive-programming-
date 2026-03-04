@@ -1,0 +1,1 @@
+{"name":"Local: maximize","url":"d:\\Desktop\\Coding\\Code foreces\\code foreces\\maximize.cpp","tests":[{"id":1714753888472,"input":"7\n10\n7\n21\n100\n2\n1000\n6","output":"5\n6\n18\n98\n1\n750\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Desktop\\Coding\\Code foreces\\code foreces\\maximize.cpp","group":"local","local":true}
