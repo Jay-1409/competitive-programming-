@@ -20,7 +20,7 @@ public:
             len++;
             temp = temp->next;
         }
-        cout << len << " " << len - n + 1 << endl;
+        //cout << len << " " << len - n + 1 << endl;
         n = len - n + 1; 
         if(n == 1)
             return save_head->next;
