@@ -1,26 +1,22 @@
 class Solution {
 public:
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
-        int n = nums.size();
-        set<vector<int>> ans;
-        for(int i = 0; i <= n; ++i) {
-            vector<int> bits(n, 0);
-            for(int j = 0; j < i; ++j) {
-                bits[j] = 1;
+        set<vector<int>> st;
+        sort(nums.begin(), nums.end());
+        auto dfs = [&](int loc, vector<int> &run, auto && self) -> void {
+            if(loc == (int)nums.size()) {
+                sort(run.begin(), run.end());
+                st.insert(run);
+                return;
             }
-            reverse(bits.begin(), bits.end());
-            do {
-                vector<int> temp;
-                for(int i = 0; i < n; ++i) {
-                    if(bits[i]) {
-                        temp.push_back(nums[i]);
-                    }
-                }
-                sort(temp.begin(), temp.end());
-                ans.insert(temp);
-            } while(next_permutation(bits.begin(), bits.end()));
-        }
-        vector<vector<int>> fans(ans.begin(), ans.end());
-        return fans;
+            run.push_back(nums[loc]);
+            self(loc + 1, run, self);
+            run.pop_back();
+            self(loc + 1, run, self);
+        };
+        vector<int> t;
+        dfs(0, t, dfs);
+        vector<vector<int>> ans(st.begin(), st.end());
+        return ans;
     }
 };
