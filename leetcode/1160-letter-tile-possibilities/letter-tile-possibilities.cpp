@@ -20,9 +20,6 @@ public:
         };
         dfs(0, "", dfs);
         vector<string> ans(st.begin(), st.end());
-        for(auto &I : ans ) {
-            cout << I << endl;
-        }
         return (int)ans.size();
     }
 };
