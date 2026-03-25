@@ -25,7 +25,6 @@ public:
                 int mid = (hi + lo) / 2;
                 long long up = upsum[mid + 1];
                 long long down = upsum[n] - upsum[mid + 1];
-                // cout << mid << " " << up << " " << down << endl;
                 if(up < down) {
                     lo = mid + 1;
                 } else if(up == down) {
@@ -34,7 +33,6 @@ public:
                     hi = mid - 1;
                 }
             }
-            // cout <<" 00" << endl;
             return false;
         } ;
         vector<vector<int>> rgrid(m, vector<int> (n, 0));
@@ -44,7 +42,8 @@ public:
             }
         }
         bool a = checker(g);
-        bool b = checker(rgrid);
-        return a || b;
+        if(a)
+            return checker(g);
+        return checker(rgrid);
     }
 };
