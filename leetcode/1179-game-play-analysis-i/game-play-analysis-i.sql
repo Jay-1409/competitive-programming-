@@ -1,0 +1,2 @@
+/* Write your PL/SQL query statement below */
+select p.player_id, TO_CHAR(p.event_date, 'YYYY-MM-DD') as first_login from activity p where p.event_date = (select min(p2.event_date) from activity p2 where p.player_id = p2.player_id);
