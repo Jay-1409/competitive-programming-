@@ -1,0 +1,2 @@
+/* Write your PL/SQL query statement below */
+select s.user_id, round(nvl((select count(*) from Confirmations s2 where s2.action = 'confirmed' and s2.user_id = s.user_id) / nullif((select count(*) from Confirmations s2 where s2.user_id = s.user_id),0),0),2)as confirmation_rate from signups s full outer join confirmations c on s.user_id = c.user_id group by s.user_id;
