@@ -1,0 +1,2 @@
+/* Write your PL/SQL query statement below */
+select distinct r2.contest_id, round(nvl((select count(*) from register r where r.contest_id = r2.contest_id) / nullif((select count(*) from users),0),0) * 100,2)  as percentage from users u join register r2 on u.user_id = r2.user_id order by percentage desc;
