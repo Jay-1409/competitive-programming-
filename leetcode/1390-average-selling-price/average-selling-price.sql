@@ -1,0 +1,2 @@
+/* Write your PL/SQL query statement below */
+select p.product_id, round(nvl(sum(p.price * us.units) / nullif(sum(us.units), 0), 0), 2) as average_price from prices p full outer join unitssold us on p.product_id = us.product_id where us.purchase_date between p.start_date and p.end_date or us.purchase_date is null group by p.product_id;
