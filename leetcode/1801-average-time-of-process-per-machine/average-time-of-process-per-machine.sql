@@ -1,0 +1,2 @@
+/* Write your PL/SQL query statement below */
+select a.machine_id, Round(avg(a.timestamp - aa.timestamp), 3) as processing_time from activity a join activity aa on a.process_id = aa.process_id and a.machine_id = aa.machine_id where a.activity_type = 'end' and aa.activity_type = 'start' group by a.machine_id;
