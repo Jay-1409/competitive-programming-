@@ -1,0 +1,2 @@
+/* Write your PL/SQL query statement below */
+select distinct c.customer_id from customer c where (select count(distinct product_key) from customer where customer_id = c.customer_id) = (select count(*) from product);
